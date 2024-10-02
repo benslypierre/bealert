@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.bealert.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <action
+        android:id="@+id/nav_to_bus"
+        app:destination="@+id/nav_commute" />
+
+    <action
+        android:id="@+id/nav_to_locations"
+        app:destination="@+id/nav_locations" />
+    <action
+        android:id="@+id/nav_to_tasks"
+        app:destination="@+id/nav_tasks" />
+    <action
+        android:id="@+id/nav_to_notes"
+        app:destination="@+id/nav_notes" />
+
+
+
+    <fragment
+        android:id="@+id/nav_tasks"
+        android:name="com.example.bealert.ui.tasks.TaskFragment"
+        android:label="@string/menu_tasks"
+        tools:layout="@layout/fragment_task" />
+
+    <fragment
+        android:id="@+id/nav_commute"
+        android:name="com.example.bealert.ui.commuteAlert.CommuteFragment"
+        android:label="@string/menu_commute"
+        tools:layout="@layout/fragment_commute" />
+
+    <fragment
+        android:id="@+id/nav_locations"
+        android:name="com.example.bealert.ui.commuteAlert.MyLocationsFragment"
+        android:label="@string/menu_locations"
+        tools:layout="@layout/fragment_my_locations" />
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="com.example.bealert.ui.notes.NoteFragment"
+        android:label="@string/menu_notes"
+        tools:layout="@layout/fragment_note" />
+
+    <action
+        android:id="@+id/nav_to_addNote"
+        app:destination="@+id/nav_addNote" />
+    <action
+        android:id="@+id/nav_to_editNote"
+        app:destination="@+id/nav_editNote" />
+
+    <fragment
+        android:id="@+id/nav_addNote"
+        android:name="com.example.bealert.ui.notes.AddNote"
+        android:label="@string/menu_notes"
+        tools:layout="@layout/fragment_add_note" />
+
+    <fragment
+        android:id="@+id/nav_editNote"
+        android:name="com.example.bealert.ui.notes.AddNote"
+        android:label="@string/menu_notes"
+        tools:layout="@layout/fragment_edit_note" />
+</navigation>
